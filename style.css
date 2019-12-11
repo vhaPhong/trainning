@@ -1,0 +1,84 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header__p {
+  font-size: 18px;
+}
+
+.header__btn--sign-up {
+  color: white;
+  background: blue;
+  font-weight: 600;
+}
+
+.banner {
+  background-image: url("./image/sea.jpg");
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  height: 400px;
+}
+
+.banner__title {
+  color: white;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.banner__contact--input {
+  width: 350px;
+  height: 37px;
+  line-height: 37px;
+}
+
+.banner .-width {
+  width: 100%;
+}
+
+.body__intro--img {
+  width: 130px;
+  height: 80px;
+}
+
+.benefits__content {
+  width: 50%;
+  margin: auto;
+  padding: 0 40px;
+}
+
+.benefits--img {
+  width: 50%;
+}
+
+.people {
+  width: 33.3333%;
+}
+
+.people--img {
+  margin: 0 auto;
+  width: 220px;
+  height: 210px;
+}
+
+.footer__lists li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.footer__reserved {
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 768px) {
+  h2, h3 {
+    font-size: 20px;
+  }
+  .people--img {
+    width: 110px;
+    height: 105px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
