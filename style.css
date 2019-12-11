@@ -5,6 +5,11 @@
   padding: 0;
 }
 
+.header {
+  height: 40px;
+  line-height: 40px;
+}
+
 .header__p {
   font-size: 18px;
 }
@@ -18,7 +23,6 @@
 .banner {
   background-image: url("./image/sea.jpg");
   background-repeat: no-repeat;
-  margin-top: 10px;
   height: 400px;
 }
 
@@ -28,19 +32,26 @@
   margin: 0 auto;
 }
 
+.banner__title--width-100 {
+  width: 100%;
+}
+
 .banner__contact--input {
+  border: none;
+  padding-left: 5px;
+  border-radius: 7px;
   width: 350px;
   height: 37px;
   line-height: 37px;
 }
 
-.banner .-width {
-  width: 100%;
+.body {
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
-.body__intro--img {
-  width: 130px;
-  height: 80px;
+.body__intro--icon {
+  color: blue;
 }
 
 .benefits__content {
@@ -57,10 +68,12 @@
   width: 33.3333%;
 }
 
-.people--img {
+.people__img {
   margin: 0 auto;
   width: 220px;
   height: 210px;
+  -webkit-box-shadow: -2px 8px 6px #ccc;
+          box-shadow: -2px 8px 6px #ccc;
 }
 
 .footer__lists li {
@@ -76,7 +89,7 @@
   h2, h3 {
     font-size: 20px;
   }
-  .people--img {
+  .people__img {
     width: 110px;
     height: 105px;
   }
