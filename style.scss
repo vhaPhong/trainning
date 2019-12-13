@@ -4,15 +4,17 @@
     padding :0;
 }
 .header{
-    height: 40px;
-    line-height: 40px;
-    &__p{
-        font-size: 18px;
-    }
+    padding: .5rem 5rem;
     &__btn--sign-up{
         color: white;
-        background: blue;
+        background: cadetblue;
         font-weight: 600;
+    }
+    .nav-link{
+        display: block;
+        text-decoration: none;
+        padding: .5rem 1rem;
+        color: #000;
     }
 }
 .banner{
@@ -59,12 +61,21 @@
 }
 .people{
     width: 33.3333%;
-    &__img{
-        margin: 0 auto;
+    &__ava{
+        border-radius: 50%;
         width: 220px;
         height: 210px;
-        box-shadow: -2px 8px 6px #ccc;
+        background-image: url('./image/people.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto;
     }
+    // &__img{
+    //     margin: 0 auto;
+    //     width: 220px;
+    //     height: 210px;
+    //     box-shadow: -2px 8px 6px #ccc;
+    // }
 }
 .footer{
     &__lists li{

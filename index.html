@@ -3,6 +3,9 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,9 +14,30 @@
 </head>
 <body>
     <section>
-        <div class="container header mt-2 d-flex justify-content-between">
-            <p class="header__p font-weight-bold">Start bootstrap</p>
-            <button class="btn header__btn--sign-up">Sign up</button>
+        <div class="header">
+            <div class="d-flex align-items-center">
+                <div class="colappse navbar-collapse">
+                    <ul class="navbar-nav bd-navbar-nav flex-row">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Bootstrap</a></li>
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                            </a>
+                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                               <a class="dropdown-item" href="#">Action</a>
+                               <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Items</a></li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Pack</a></li>
+                    </ul>
+                </div>
+                <button class="btn header__btn--sign-up">Sign up</button>
+            </div>
         </div>  
         <div class="container-fuild banner d-flex justify-content-center align-items-center">
             <div>
@@ -84,17 +108,20 @@
                 <h2 class="text-center font-weight-bold">What people are saying....</h2>
                 <div class="container mt-5 d-flex justify-content-center">
                     <div class="people text-center">
-                        <img src="./image/people.jpg" alt="" class="people__img rounded-circle">
+                        <div class="people__ava"></div>
+                        <!-- <img src="./image/people.jpg" alt="" class="people__img rounded-circle"> -->
                         <h3 class="mt-3 font-weight-bold">Margaret E.</h3>
                         <p class="mt-3">"This is fantastic! Thanks so much guys!"</p>
                     </div>
                     <div class="people text-center">
-                        <img src="./image/people.jpg" alt="" class="people__img rounded-circle">
+                        <div class="people__ava"></div>
+                        <!-- <img src="./image/people.jpg" alt="" class="people__img rounded-circle"> -->
                         <h3 class="mt-3 font-weight-bold">Fred S.</h3>
                         <p class="mt-3">"Bootstrap is amazing! i've been using it to create lots of super nice landing pages "</p>
                     </div>
                     <div class="people text-center">
-                        <img src="./image/people.jpg" alt="" class="people__img rounded-circle">
+                        <div class="people__ava"></div>
+                        <!-- <img src="./image/people.jpg" alt="" class="people__img rounded-circle"> -->
                         <h3 class="mt-3 font-weight-bold">Sarah W.</h3>
                         <p class="mt-3">"Thanks so much for making these free resources available to us!"</p>
                     </div>
