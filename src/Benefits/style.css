@@ -1,0 +1,12 @@
+.benefits{
+    width: 100%;
+}
+.benefits__content{
+    text-align: left;
+    width: 50%;
+    margin: auto;
+    padding: 0 40px;
+}
+.benefits__img{
+    width: 50%;
+}

@@ -1,0 +1,19 @@
+
+.header--width-50{
+    width: 50%;
+}
+.header__title{
+    color: white;
+    font-weight: bold;
+}
+.header__input{
+    height: 40px;
+    width: 250px;
+    border: none;
+    border-radius: 7px;
+    padding-left: 5px;
+}
+.header__btn{
+    font-weight: bold;
+    height: 40px;
+}
