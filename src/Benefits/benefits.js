@@ -1,24 +1,31 @@
-import React, {Component} from 'react';
+import React,{Component} from 'react';
 import './style.css';
-import imagePlay from './play.png';
-import imageResponsive from './Responsive.png';
-import imageScreen from './screen.png';
-import { Container,Row } from 'react-bootstrap';
 
 class Benefits extends Component {
-    state = {
-        benefits:[
-            {title: 'Fully Responsive Design',
-            text:'When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it\'s a phone, tablet, or desktop the page will behave responsively!'},
-            {title: 'Ready to Use',
-            text:'Lorem Ipsum is simply dummy text of the printing'},
-            {title: 'Bootstrap 4 Ready',
-            text:'Lorem Ipsum is simply dummy text of the printing',}
-        ],
-    }
-    render () {
+    render(){
+
         return (
-            <Container fluid={true}>
+            <div className="d-flex benefits">
+                <div className="benefits__content">
+                    <h2>{this.props.title}</h2>
+                    <p>{this.props.text}</p>
+                </div>
+                <img className="benefits__img" src={this.props.image} alt="" />
+            </div>
+        );
+
+    }
+
+}
+
+
+
+
+
+export default Benefits
+
+
+            /*<Container fluid={true}>
                 <Row>
                     <div className="d-flex benefits">
                         <div className="benefits__content">
@@ -42,13 +49,4 @@ class Benefits extends Component {
                         <img className="benefits__img" src={imageScreen} alt=""/>
                     </div>
                 </Row>
-            </Container>
-        );
-    }
-}
-
-
-
-
-
-export default Benefits
+            </Container>*/
