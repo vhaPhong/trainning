@@ -8,13 +8,23 @@ export default function FormInput (props) {
   const phone = useInput('');
   const birthday = useInput('');
   const [showInfo, setShowInfo] = useState(false);
-  const nameRegex = /^[A-Za-z0-9_-]{11,50}$/;
-  const phoneRegex = /^[0-9]*$/;
-  const emailRegex = /[a-zA-Z0-9_\\.\\+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9.]+/;
   let flag = true;
-  // const dateRegex = /(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d/;
+
+
+  function useInput (initialValue) {
+    const [value,setValue] = useState(initialValue)
+
+    function handleChange(event){
+      setValue(event.target.value)
+    }
+    return {
+      value,
+      onChange: handleChange
+    }
+  }
   
   function checkNameInput(){
+    let nameRegex = /^[A-Za-z0-9_-]{11,50}$/;
     if(!nameRegex.test(name.value)){
       alert('Wrong name!!!')
       return true;
@@ -23,6 +33,7 @@ export default function FormInput (props) {
   }
 
   function checkPhoneNumber(){
+    let phoneRegex = /^[0-9]*$/;
     if(!phoneRegex.test(phone.value)){
       alert('Wrong number!!!')
       return true;
@@ -31,6 +42,7 @@ export default function FormInput (props) {
   }
 
   function checkEmailInput(){
+    let emailRegex = /[a-zA-Z0-9_\\.\\+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9.]+/;
     if(!emailRegex.test(email.value)){
       alert('Wrong email!!!')
       return true;
@@ -107,7 +119,7 @@ export default function FormInput (props) {
             placeholder='Your Email'
             {...email}
           />
-          <Form.Text className="text-muted">Correct: user1231@gmail.com</Form.Text>
+          <Form.Text className="text-muted">Example: user1231@gmail.com</Form.Text>
           {showInfo ? 
           <Form.Text style={{color: 'green'}}>
             Email: {email.value}
@@ -129,14 +141,3 @@ export default function FormInput (props) {
   );
 }
 
-function useInput (initialValue) {
-  const [value,setValue] = useState(initialValue)
-
-  function handleChange(event){
-    setValue(event.target.value)
-  }
-  return {
-    value,
-    onChange: handleChange
-  }
-}
