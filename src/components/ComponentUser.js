@@ -1,19 +1,10 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import * as actionTypes from '../action';
+import { useSelector } from 'react-redux';
 
 export default function User() {
 	const users = useSelector((state) => state.userReducer.value);
-	const dispatch = useDispatch();
-
-	function handleGetUser() {
-		dispatch({ type: actionTypes.GET_USER });
-	}
 	return (
 		<div>
-			<button type="button" onClick={handleGetUser}>
-				Get User
-			</button>
 			<div>
 				{users.results ? (
 					<div>

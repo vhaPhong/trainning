@@ -6,14 +6,14 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import userReducer from './reducers/User';
-import dogReducer from './reducers/Dogs';
+import userReducer2 from './reducers/User2';
 import rootSaga from './sagas/saga'
 
 const sagaMiddleware = createSagaMiddleware();
 
 const rootReducer = combineReducers({
 	userReducer,
-	dogReducer
+	userReducer2
 });
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 

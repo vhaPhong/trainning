@@ -4,9 +4,9 @@ const initialState = {
     value :'',
 }
 
-const dogReducer = (state = initialState, action) => {
+const userReducer2 = (state = initialState, action) => {
 	switch (action.type) {
-        case actionTypes.GET_API_DOG:
+        case actionTypes.GET_API_USER2:
             return {
                 ...state,
                 value: action.data
@@ -16,4 +16,4 @@ const dogReducer = (state = initialState, action) => {
 	}
 };
 
-export default dogReducer;
+export default userReducer2;

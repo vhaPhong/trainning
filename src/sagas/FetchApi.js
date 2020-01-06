@@ -12,9 +12,9 @@ export function* getUser() {
 
 function* fetchApiUser2() {
 	const person2 = yield fetch('https://randomuser.me/api/').then((results) => results.json());
-	yield put({ type: actionTypes.GET_API_DOG, data: person2 });
+	yield put({ type: actionTypes.GET_API_USER2, data: person2 });
 }
 
 export function* getUser2() {
-	yield takeLatest(actionTypes.GET_DOG, fetchApiUser2);
+	yield takeLatest(actionTypes.GET_USER2, fetchApiUser2);
 }

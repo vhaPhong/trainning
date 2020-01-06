@@ -1,16 +1,23 @@
 import React from 'react';
 import './App.css';
 import User from './components/ComponentUser';
-import Dogs from './components/ComponentUser2';
-class App extends React.Component {
-	render() {
-		return (
-			<div className="App">
-				<User />
-				<Dogs />
-			</div>
-		);
+import User2 from './components/ComponentUser2';
+import * as actionTypes from './action';
+import { useDispatch } from 'react-redux';
+
+function App() {
+	const dispatch = useDispatch();
+	function handleApi() {
+		dispatch({ type: actionTypes.GET_USER });
+		dispatch({ type: actionTypes.GET_USER2 });
 	}
+	return (
+		<div className="App">
+			<button onClick={handleApi}>Show</button>
+			<User />
+			<User2 />
+		</div>
+	);
 }
 
 export default App;
